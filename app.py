@@ -319,7 +319,7 @@ JSON Response:""" # The prompt guides the model towards the desired output
                     else:
                         sanitized_response = response_content.strip()
                         
-                    summary_data = json.loads(response_content)
+                    summary_data = json.loads(sanitized_response)
                     generated_title = summary_data.get("title")
                     generated_summary = summary_data.get("summary")
 
